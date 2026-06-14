@@ -67,6 +67,7 @@ jobs:
       - name: Debug Build
         env:
           BUILD_PLUGIN: none
+          JAVA_TOOL_OPTIONS: "-XX:+IgnoreUnrecognizedVMOptions"
         run: |
           echo "sdk.dir=${ANDROID_HOME}" > local.properties
           echo "ndk.dir=${ANDROID_HOME}/ndk/25.0.8775105" >> local.properties
